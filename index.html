@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rocky - home</title>
-    <link rel="stylesheet" href="./style.css">
-    <style>/* base rule  */
+<!--     <link rel="stylesheet" href="./css/style.css"> -->
+
+    <style>
+        /* base rule  */
 
 * {
   margin: 0;
@@ -18,7 +20,7 @@ html {
   font-size: 62.5%;
   /* 1rem = 10px  */
   scroll-behavior: smooth;
-  /* scroll-snap-type: Y proximity; */
+  /* scroll-snap-type: x proximity; */
 }
 
 h1,
@@ -72,7 +74,8 @@ li {
 .container{
 max-width: 142rem;
 margin: 0 auto;
-padding: 9.6rem 2.4rem;
+/* padding: 9.6rem 2.4rem; */
+padding: 9.4rem 2.4rem 2.4rem 2.4rem; 
 
 }
 
@@ -147,7 +150,7 @@ box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0p
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.8rem 0;
+  padding: 1.8rem 2.4rem;
 
 
 
@@ -219,6 +222,7 @@ main{
 
 
 .section-hero--image img{
+
   width: 100%;
   height: auto;
   transform: scaleX(-1);
@@ -229,6 +233,7 @@ main{
 }
 
 .section-hero .grid{
+
   align-items: center;
   gap: 6.5rem;
 
@@ -272,7 +277,7 @@ main{
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 132px;
+  height: 90px;
 }
 
 .custom-shape-divider-bottom-1728049254 .shape-fill {
@@ -392,7 +397,107 @@ box-shadow: 2px 2px 12px rgb(168, 168, 168);
 }
 /* end portfolio section */
 
-/* footer */</style>
+/* footer */
+
+
+/* media querry section */
+
+
+@media (width <= 1480px) {
+  html{
+    font-size: 56.25%;
+  }
+  .section-hero img{
+    width: 90%;
+  }
+
+}
+
+
+@media (width <= 1309px) {
+  html{
+    font-size: 54%;
+  }
+
+
+}
+
+@media (width <= 998px) {
+
+
+ .section-hero{
+  height: auto;
+  padding-bottom: 10rem;
+  & .grid-two--cols{
+    grid-template-columns: 1fr;
+
+
+    & .section-hero--content{
+      order: 2;
+    }
+
+    & .section-hero--image{
+      order: 1;
+
+      & img{
+        width: 40%;
+      }
+    }
+  }
+ }
+  
+
+
+.section-about .about-div{
+  text-align: left;
+}
+
+}
+@media (width <= 768px) {
+
+  .view-btn{
+    width: 20vw;
+    height: 4vh;
+  }
+
+.section-portfolio img{
+  width: 57vw;
+  &:hover{
+    width: 63vw;
+  }
+}
+
+  
+  /* .section-navbar .container{
+    & .navbar-brand{
+      padding-left: 148px;
+     & img{
+      
+      width: 68%;}
+    }
+  
+  } */
+
+  .grid-two--cols, .grid-three--cols, .grid-four--cols{
+    grid-template-columns: 1fr;
+  }
+  .section-navbar .container{
+    display: flex;
+    flex-direction: column;
+
+    & .navbar-brand{
+      text-align: center;
+      margin-top: 1rem;
+      margin-bottom: 1.4rem;
+      & img{
+        width: 43%;
+      }
+    }
+  }
+}
+/* end media quarry */
+
+    </style>
 </head>
 <body>
     <!-- start nav bar section -->
@@ -403,13 +508,13 @@ box-shadow: 2px 2px 12px rgb(168, 168, 168);
                 <a href="index.html">
                     <img class="logopng" src="./images/logo.png" alt="logo image here" width="30%" height="auto">
                 </a>
-            </div>
+            </div> <br> <br>
             <nav class="navbar">
                 <ul>
                     <li class="nav-item"> <a class="nav-link" href="#">Home</a> </li>
                     <li class="nav-item"><a class="nav-link" href="#section-about">About</a> </li>
                     <li class="nav-item"><a class="nav-link" href="#section-portfolio">Portfolio</a> </li>
-                       <li class="nav-item"><a class="nav-link" href="/portcontact.html">Contact</a>  </li>
+                       <li class="nav-item"><a class="nav-link" href="/html/portcontact.html">Contact</a>  </li>
                 </ul>
             </nav>
         </div>
@@ -429,13 +534,13 @@ box-shadow: 2px 2px 12px rgb(168, 168, 168);
                 </p>
 
                 <div class="hero-btn">
-                    <a href="https://github.com/rockykumar90" class="btn btn-white" >Learn with us</a>
+                    <a href="" class="btn btn-white" >Learn with us</a>
                 </div>
 
             </div>
                 <div class="section-hero--image">
                     <figure>
-                        <img src="./images/cartpng.png" alt="a 3d character">
+                      <center> <img src="./images/cartpng.png" alt="a 3d character"></center> 
                     </figure>
                 </div>
             
@@ -511,7 +616,7 @@ box-shadow: 2px 2px 12px rgb(168, 168, 168);
         <p class="section-common-subheading">here my all projects which created with using html and css </p>
     </div>
 
-    <div class="container grid grid-four--cols">
+    <div style="padding-left: 50px; padding-right: 50px;" class="container grid grid-four--cols">
         <fieldset><legend>Image Gallery - html</legend>
         <div class="portfolio-div">
             <div class="icon">
